@@ -35,7 +35,7 @@ $6$: $[63]$
 
 Now, the question remains, how do we count the subsequences that results in these numbers?\
 For this, we can use a dp array that will count the number of subsequences for each number between $0$ and $63$ (inclusive). To explain how this will work, let's say at some point in the program, we have found $s_0, s_1, \dots, s_{62}, s_{63}$, where $s_i$ is represents the number of subsequences that would result in a value of $i$, and we are considering the outcome from introducing a new integer $a_j$ into the subsequences. If we do so to any of the subsequences $s_i$, what we will get is a new subsequence for $s_{i\\&a_j}$. This is because applying bitwise $\mathsf{AND}$ operations to the elements of $s_i$ results in $i$, which means adding in $a_j$ will turn it into $i\\&a_j$. Since none of these subsequences previously had element $a_j$, all of these subsequences we would create by adding in $a_j$ would be considered uncounted subsequences that we would need to add to our count. 
-\prime
+$\prime$
 
 This means, for each subsequence count $s_i$, the new subsequence count for $s_{i\\&a_j}$ would be $s^{\prime}_{i\\&a_j} = s_{i\\&a_j} + s_i$ since we can make $s_i$ new subsequences by adding $a_j$ to them. In order to avoid adding in $a_j$ multiple times into some subsequences, we would want to update the counts in ascending order because bitwise $\mathsf{AND}$ operations can only take away bits and not add them (meaning the resulting number will less than or equal to the previous number), so going in ascending order means we wouldn't ever be using a subsequence count that already includes subsequences with $a_j$ in them.
 
