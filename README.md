@@ -4,7 +4,7 @@ Jeffrey Jiang
 Source: Codeforces 1829H
 
 ### Problem Statement
-Given an array $a$ consiting of $n$ positive integers, count the number of **non-empty** suvsequences for which the bitwise $\mathsf{AND}$ of the elements in the subsequence has exactly $k$ set bits in its binary representation. The answer may be large, so output it modulo $10^9+7$.
+Given an array $a$ consiting of $n$ positive integers, count the number of **non-empty** subsequences for which the bitwise $\mathsf{AND}$ of the elements in the subsequence has exactly $k$ set bits in its binary representation. The answer may be large, so output it modulo $10^9+7$.
 
 Recall that the subsequence of an array $a$ is a sequence that can be obtained from $a$ by removing some (possibly, zero) elements. For example, $[1,2,3]$, $[3]$, $[1,3]$ are subsequences of $[1,2,3]$, but $[3,2]$ and $[4,5,6]$ are not.
 
