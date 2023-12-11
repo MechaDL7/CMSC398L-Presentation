@@ -23,7 +23,7 @@ For each test case, output a single integer — the number of subsequences that 
 ### Analysis
 For this problem, you are given an array $a$ and asked to find the number of subsequences of $a$ such that the bitwise $\mathsf{AND}$ of the members of the subsequences results in a number with $k$ set bits. 
 
-Here are a couple of notable details of the problem, every member of $a$ $a_i$ is between $0$ and $63$ (inclusive) and $k$ is no more than $6$. Because we are dealing with bitwise $\mathsf{AND}$ operations, this means the associated set bits from a subsequence can't be larger than $63$ since bitwise $\mathsf{AND}$ operations can only remove bits. For this reason, given a $k$ value, we can think of the problem as summing up the number of subsequences that, after applying the bitwise $\mathsf{AND}$ operations, results in a number with $k$ set bits. For each $k$, these are:
+Here are a couple of notable details of the problem, every member of $a$, $a_i$, is between $0$ and $63$ (inclusive) and $k$ is no more than $6$. Because we are dealing with bitwise $\mathsf{AND}$ operations, this means the associated set bits from a subsequence can't be larger than $63$ since bitwise $\mathsf{AND}$ operations can only remove bits. For this reason, given a $k$ value, we can think of the problem as summing up the number of subsequences that, after applying the bitwise $\mathsf{AND}$ operations, results in a number with $k$ set bits. For each $k$, these are:
 
 $0$: $[0]$\
 $1$: $[1, 2, 4, 8, 16, 32]$\
